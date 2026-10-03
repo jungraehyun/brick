@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEON BREAKER</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="game-shell">
+
+    <header class="hud">
+      <div class="hud-item">
+        <span>SCORE</span>
+        <strong id="score">0</strong>
+      </div>
+
+      <div class="logo">NEON BREAKER</div>
+
+      <div class="hud-item right">
+        <span>BEST</span>
+        <strong id="best">0</strong>
+      </div>
+    </header>
+
+    <section class="game-container">
+      <canvas id="gameCanvas" width="1280" height="720"></canvas>
+
+      <div id="titleScreen" class="overlay">
+        <div class="panel">
+          <div class="glitch-title">NEON BREAKER</div>
+          <p>DESTROY. SURVIVE. BREAK THE RECORD.</p>
+
+          <button id="startButton">START GAME</button>
+
+          <div class="controls">
+            <span>← →</span>
+            <span>OR</span>
+            <span>A D</span>
+          </div>
+
+          <small>SPACE : START / RESTART</small>
+        </div>
+      </div>
+
+      <div id="gameOverScreen" class="overlay hidden">
+        <div class="panel">
+          <div class="game-over-title">GAME OVER</div>
+
+          <div class="final-score">
+            <span>SCORE</span>
+            <strong id="finalScore">0</strong>
+          </div>
+
+          <button id="restartButton">RETRY</button>
+
+          <small>SPACE : RESTART</small>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div>
+        <span>STATUS</span>
+        <strong id="status">READY</strong>
+      </div>
+
+      <div>
+        <span>SPEED</span>
+        <strong id="speed">1.00x</strong>
+      </div>
+
+      <div>
+        <span>WAVE</span>
+        <strong id="wave">1</strong>
+      </div>
+    </footer>
+
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
